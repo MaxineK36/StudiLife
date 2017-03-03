@@ -1,0 +1,272 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel = "stylesheet" href = "overrides.css">
+  <link rel = "stylesheet" href = "index.css">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+</head>
+
+<script>
+$(document).ready(function()
+{
+  $(".collapseUnit").hide();
+  $(".toggleUnits").click(function(){
+    $(this).parents().parents().next(".collapseUnit").slideToggle(300, function()
+    {
+
+    });
+  });
+});
+  </script>
+
+<body>
+
+
+
+<!-- setting up page layout -->
+<div class="container fullWidth">
+  <div class="row">
+    <img src="logo.png" id="logo">
+  </div>
+  <div class="row" >
+    <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+              </button>
+              <!-- <a class="navbar-brand" href="http://www.barnesandnoble.com/"> <img src="studilife.png"> </a> -->
+      </div>
+  
+    <div class = "navbar-collapse collapse fullWidth2" id="navbarRow">
+      <ul class = "nav navbar-nav">
+        <li class ="active"> <a href="index.html"> Home </a> <li>
+        <li> <a href="graph.html"> Class Groups </a> </li>
+        <li> <a href="about.html"> Project Groups </a> </li>
+        <li> <a href="about.html"> My Tasks </a> </li>
+        <li> <a href="about.html"> My Calendar </a> </li>
+        <li> <a href="about.html"> Profile </a> </li>
+        <li> <a href="about.html"> Settings </a> </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+  <div class="row">
+      <!-- Left Column setup -->
+  	<div class="col-sm-3">
+  		<div class="row">
+        <!-- "My Tasks" header-->
+        <div class="myHeader tasks">
+          My Tasks
+        </div>
+        <!-- "My Tasks body" -->
+        <div class="tasks leftBody">
+          <!-- "Each of these are the checkboxes in the "my tasks" section, where there is a checkboxes and then a checkmark -->
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">
+              My first class
+              <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span> 
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>   
+            <input type="checkbox" value="">       
+              My second task
+              <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+            </label>
+          </div>
+          <div class="checkbox">
+             <label> 
+                <input type="checkbox" value="">
+              My third task
+              <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+            </label>
+          </div>
+        </div>
+
+  		</div>
+  		<div class="row">
+        <!-- "Upcoming" header-->
+        <div class="myHeader upcoming">
+          Upcoming
+        </div>
+
+        <div class="upcoming leftBody">
+          <!-- Each of theses is a date with an event associated with it -->
+          <p>
+            <span class="date"> 1/12 </span>
+            <span class="event"> Go to school </span>
+          </p>
+          <p>
+            <span class="date"> 1/13 </span>
+            <span class="event"> Go to school </span>
+          </p>
+          <p>
+            <span class="date"> 1/14 </span>
+            <span class="event"> Go to school </span>
+          </p>
+          <p>
+            <span class="date"> 1/15 </span>
+            <span class="event"> Go to school </span>
+          </p>
+  		</div>
+  	</div>
+  </div>
+    <!-- Center Column setup-->
+  	<div class="col-sm-6">
+      <div class="feed">
+
+        <!-- Each of these is a header that says something like "Mary Smith to APUSh" and then a "feedBoxy" section with the actual content that was "posted"-->
+        <div class="myHeader2" style="margin-top: 10px"> <!-- This one has a top margin because it's first, and this way it lines up with the left column-->
+           Mary Smith to APUSH
+        </div>
+          <div class="feedBody"> 
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in”
+          </div>
+        <div class="myHeader2">
+          John Doe posted a new study guide in AP Lang
+         </div>
+          <div class="feedBody"> 
+            <img src="img4.png" class="inlineImg"> </img>
+          </div>
+        <div class="myHeader2">
+          Jane Glenn to APUSH
+        </div>
+          <div class="feedBody"> 
+            Hey guys do you know what the American Revolution assignment is for tonight? I couldn't find it anywhere on schoology...
+          </div>
+        <div class="myHeader2">
+          John Doe to AP Spanish Social Media project
+       </div>
+          <div class="feedBody"> 
+            Here's the blueberry pic:
+            <img src="image4.png" class="inlineImg"> </img>
+          </div>
+      </div>
+  		<!-- Feed -->
+  	</div>
+
+    <!-- Right Column Setup-->
+  	<div class="col-sm-3">
+      <!-- This is the "Chats" header -->
+      <div class="myHeader chatHead" style="margin-top: 10px; margin-bottom: 30px;">
+        Chats
+      </div>
+      <!-- Here area ll the individual chats; i'll put more comments on the first one than on the others-->
+
+
+      <!-- Here's the first chat: -->
+      <div class="panel panel-default chatWindow">
+        <div class="panel-heading"> <!-- Sets it up as the thing to click to expand the chat -->
+          <p class="panel-title chatHead myHeader2"> <!-- Div that will have the title -->
+            <a class="toggleUnits"> AP Spanish <!-- Title of the chat goes in here-->
+               </a> </p></div>
+        <div class = "collapseUnit"> <!-- This is so that it will actually collapse and expand when you click -->
+          <div class="panel-body chats"> <!-- Body of the chat goes in here-->
+               <p> Mary: hey guys did you understand the hw? </p>
+               <p> John: no lol it was so confusing idk </p>
+               <p> Mary: ugh does anyone else get it? </p>
+                <p> Jane: Ya i think I figured it out it wasn’t that bad </p>
+                <p> Mary: … </p>
+                <p> Jane: hang on lm find it and i’ll help you </p>
+              <div class="textEntryBox input-group">  <!-- Section with the type here box and the send button -->
+                <input class="form-control" type="text" placeholder="type here to chat..." id="example-text-input"> <!-- This is the type here box-->
+                 <div class="input-group-addon"><a href="hi">Send</a></div> <!-- This is the send button -->
+              </div>
+          </div>
+        </div>
+      </div> 
+
+      <!-- Here's the second chat: -->
+      <div class="panel panel-default chatWindow">
+        <div class="panel-heading">
+          <p class="panel-title chatHead myHeader2">
+            <a class="toggleUnits"> APUSH <!-- Title of the chat goes in here-->
+               </a> </p></div>
+        <div class = "collapseUnit">
+          <div class="panel-body chats"> <!-- Body of the chat goes in here-->
+               <p> Mary: hey guys did you understand the hw? </p>
+               <p> John: no lol it was so confusing idk </p>
+               <p> Mary: ugh does anyone else get it? </p>
+                <p> Jane: Ya i think I figured it out it wasn’t that bad </p>
+                <p> Mary: … </p>
+                <p> Jane: hang on lm find it and i’ll help you </p>
+              <div class="textEntryBox input-group"> 
+                <input class="form-control" type="text" placeholder="type here to chat..." id="example-text-input">
+                 <div class="input-group-addon"><a href="hi">Send</a></div>
+              </div>
+          </div>
+        </div>
+      </div>  
+
+      <!-- Here's the third chat: -->
+      <div class="panel panel-default chatWindow">
+        <div class="panel-heading">
+          <p class="panel-title chatHead myHeader2">
+            <a class="toggleUnits"> AP Lang and Comp <!-- Title of the chat goes in here-->
+               </a> </p></div>
+        <div class = "collapseUnit">
+          <div class="panel-body chats"> <!-- Body of the chat goes in here-->
+               <p> Mary: hey guys did you understand the hw? </p>
+               <p> John: no lol it was so confusing idk </p>
+               <p> Mary: ugh does anyone else get it? </p>
+                <p> Jane: Ya i think I figured it out it wasn’t that bad </p>
+                <p> Mary: … </p>
+                <p> Jane: hang on lm find it and i’ll help you </p>
+              <div class="textEntryBox input-group"> 
+                <input class="form-control" type="text" placeholder="type here to chat..." id="example-text-input">
+                 <div class="input-group-addon"><a href="hi">Send</a></div>
+              </div>
+          </div>
+        </div>
+      </div> 
+
+      <!-- Here's the fourth chat: -->
+      <div class="panel panel-default chatWindow">
+        <div class="panel-heading">
+          <p class="panel-title chatHead myHeader2">
+            <a class="toggleUnits"> Honors Algebra 2 <!-- Title of the chat goes in here-->
+               </a> </p></div>
+        <div class = "collapseUnit">
+          <div class="panel-body chats"> <!-- Body of the chat goes in here-->
+               <p> Mary: hey guys did you understand the hw? </p>
+               <p> John: no lol it was so confusing idk </p>
+               <p> Mary: ugh does anyone else get it? </p>
+                <p> Jane: Ya i think I figured it out it wasn’t that bad </p>
+                <p> Mary: … </p>
+                <p> Jane: hang on lm find it and i’ll help you </p>
+              <div class="textEntryBox input-group"> 
+                <input class="form-control" type="text" placeholder="type here to chat..." id="example-text-input">
+                 <div class="input-group-addon"><a href="hi">Send</a></div>
+              </div>
+          </div>
+        </div>
+      </div> 
+      </div>
+
+  	</div>
+  </div>
+
+</div>
+
+
+</body>
+
+
+</html>
