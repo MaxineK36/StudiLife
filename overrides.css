@@ -1,0 +1,149 @@
+/*Initial setup:*/
+
+body{
+	/*set up the background image to tile*/
+	background-image: url("background.png");
+	background-repeat: repeat;
+}
+
+.fullWidth{
+	/*make sure everything reaches to both edges of the screen*/
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.row{
+	/*continues make sure each row reaches all the way to each edge ofthe screen*/
+	margin-left:0;
+	margin-right: 0;
+}
+
+
+#logo{
+	/*makes sure the "studilife" logo appears on the right side, not the left*/
+	padding-top: 7px;
+	float: right;
+	padding-right: 10px;
+}
+
+
+
+/*Setting up the navbar (before it collapses):*/
+
+#navbarRow{
+	/*creates a purple border on the top and bottom of the navbar*/
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: #430C51;
+
+	/*sets the font type and size for the navbar*/
+	font-family: "Iowan Old Style", Georgia, Serif;
+	font-size: 16px;
+
+	/*gives the navbar the right background color*/
+	background-color: #DCDEE0;
+}
+
+.navbar-default .navbar-nav>li>a {
+	/*sets the navbar links to be purple*/
+	color: #430C51;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	/*makes the active navbar link also purple*/
+	color: #430C51;
+}
+
+.navbar-nav > li > a, .navbar-brand{
+	/*mimizes the navbar padding so that it won't go over 30px in height*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+.navbar {
+	/*adjusts the height of the navbar for when it's collapsed, so that it doesn't "peek out from under" before collapsing, and so that it isn't too tall after collapsing*/
+	min-height: 0;
+	height: auto;
+}
+
+
+.navbar .navbar-nav {
+	/*first step in centering the navbar text*/
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+	/*second step*/
+  text-align: center;
+}
+
+
+/*For after collapsing:*/ 
+
+.navbar-toggle .icon-bar {
+	/*sets the size of those little bars that you click to expand the navbar*/
+  width: 20px;
+  height: 1px;
+}
+
+.navbar-toggle {
+	/*sets the padding and margins for those three little bars, so they'll be in the right place and the right size*/
+	padding: 5px 4px;
+	margin-top: 5px;
+    margin-right: 13px;
+    margin-bottom: 5px;
+/*    color: #430C51;
+*/}
+
+.navbar-default .navbar-toggle {
+	/*sets the border color for the box around the three lines*/
+    border-color: #430C51;
+}
+
+
+.navbar-toggle .icon-bar+.icon-bar {
+	/*Sets the space between each little bar*/
+    margin-top: 3px;
+}
+
+.navbar-header{
+	/*gives the big bar a purple border and sets the background color*/
+	background-color: #DCDEE0;
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: #430C51;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	/*makes the three little lines purple*/
+    background-color: #430C51;
+}
+
+
+/* for the tasks checkboxes */
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 0px;
+}
+
+
+/*other overrides*/
+
+/*this makes sure that I can control the padding around the chat boxes from the index.css file (so bootstrap isn't controlling all of it)*/
+.panel{
+	margin-bottom: 0px;
+}
+.panel-heading {
+	padding: 0px;
+}
+
+
+
+

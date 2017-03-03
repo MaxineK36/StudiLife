@@ -1,0 +1,176 @@
+/*sets the font (overriden for headers)*/
+body{
+	font-family: "Open Sans";
+}
+
+/*makes sure images don't go outside of their boxes, and gives them padding*/
+.inlineImg{
+	width: 100%;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+/*this class is for the larger headers, and it sets the font size, family, and alignment, as well as adding padding and a shadow*/
+.myHeader{
+	margin-top: 10px;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 24pt;
+	text-align: center;
+	padding-left: 5px;
+	color: white;
+	/* offset-x | offset-y | blur-radius | color (how to set up the shadow)*/
+	box-shadow: 3px -3px 20px #6F6F6F;
+
+}
+
+/*this class does the same thing but for the smaller headers*/
+.myHeader2{
+	font-family: 'Cormorant Garamond', serif;
+	color: white;
+	background-color: #2E3939;
+	padding: 5px 8px 5px 8px;
+	font-size: 18px;
+	box-shadow: 3px -3px 20px #6F6F6F;
+}
+
+
+/*additional left column formatting */
+
+/*this class sets the font size, shadow, etc. for everything in the leftmost column that isn't a header*/
+.leftBody{
+	height: 40%;
+	margin-bottom: 5%;
+	padding: 15px 0px;
+	font-family: "Open Sans";
+	font-size: 14px;
+	box-shadow: 3px 0px 20px #6F6F6F;
+
+}
+
+/*sets the background colors for the "my tasks" header and background respectively*/
+.myHeader.tasks{
+	background-color: #3fa695;
+}
+
+.tasks.leftBody{
+	background-color: #D1FEF2;
+	line-height: 1.5;
+}
+
+/*sets the background colors for the "upcoming" header and background respectively*/
+.upcoming.myHeader{
+	background-color: #125444;
+}
+
+.upcoming.leftBody{
+	background-color: #D1F7CF;
+	padding-left: 20px;
+}
+
+/*makes sure that (in the "upcoming" section) all the dates are bold and padded*/
+.date{
+	font-weight: bold;
+	padding-right: 2px;
+}
+
+
+/*additional center column formatting */
+
+/*sets the background color, padding, and shadow for the main "posts"*/
+.feedBody{
+	padding: 20px 30px;
+	background-color: #C5DCC6;
+	box-shadow: 3px -3px 20px #6F6F6F;
+
+}
+
+
+
+/*additional right column formatting */
+
+
+/*makes the send button white*/
+a{
+	color: white;
+}
+
+/*specifies background color for the thing that says "Chats"*/
+.chatHead{
+	background-color: #A29256;
+	text-align: center; 
+}
+
+/*specifies background color for the actual chat body that says "Chats"*/
+.chats{
+	background-color: #F5EACE;
+	font-size: 12px;
+}
+
+/*sets the margins for the chat window*/
+.chatWindow{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+}
+
+/*specifies font size and background color for the "type here to chat" box*/
+.form-control{
+	background-color: #EBEBEB;
+	font-size: 10px;
+}
+
+/*specifies font size and background color for the send button*/
+.input-group-addon{
+	background-color: #5E5E5E;
+	font-size: 10px;
+}
+
+
+/*setting up the checkboxes*/
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+
+    /*border of the checkbox*/
+    border: 2px solid black;
+
+    /*width and height of the checkbox*/
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+/*I stole all of this from the internet, but basically it means that the checkboxes work*/
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
