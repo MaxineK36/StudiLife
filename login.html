@@ -16,7 +16,28 @@
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+
+<body>
+
+<div class="col-md-4">
+</div>
+
+
+<div class="col-md-4">
+	<div id="loginDiv">
+		Please sign in here with your google account
+    <p>
+    <button type="button" class="btn btn-default" id="loginButton" onclick="signIn(provider);"> Click Here to Sign In </button>
+  </p>
+	</div>
+</div>
+
+
+<div class="col-md-4">
+</div>
+
 <script>
+  console.log("11:06 version working");
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyB3djWUB8OEdYHsMxCOp2iTjKKrtheswDA",
@@ -30,49 +51,33 @@
   var provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/plus.login');
 
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
+var signIn = function(){ 
+  console.log("signing in")
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      // ...
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
 
-firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}).catch(function(error) {
-  // An error happened.
-});
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+    }).catch(function(error) {
+      // An error happened.
+    });
 
+  }
 </script>
-
-<body>
-
-<div class="col-md-4">
-</div>
-
-
-<div class="col-md-4">
-	<div id="loginDiv">
-		Please sign in here with your google account
-    <p>
-    <button type="button" class="btn btn-default" id="loginButton" onclick="signInWithPopup(provider);"> Click Here to Sign In </button>
-  </p>
-	</div>
-</div>
-
-
-<div class="col-md-4">
-</div>
 
 </body>
 
