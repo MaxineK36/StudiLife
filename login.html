@@ -35,9 +35,10 @@
 
 <div class="col-md-4">
 </div>
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
 
 <script>
-  console.log("11:10 version working");
+  console.log("11:12 version working");
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyB3djWUB8OEdYHsMxCOp2iTjKKrtheswDA",
@@ -46,6 +47,7 @@
     storageBucket: "studilife-7a2fc.appspot.com",
     messagingSenderId: "910045511452"
   };
+
   firebase.initializeApp(config);
 
   var provider = new firebase.auth.GoogleAuthProvider();
