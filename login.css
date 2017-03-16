@@ -1,0 +1,17 @@
+#loginDiv{
+	border: solid 1px #430C51;
+	border-radius: 25px;
+	background-color: rgba(220, 222, 224, 0.85);	
+	margin-top: 40%;
+	margin-bottom: 60%;
+	height: auto;
+	text-align: center;
+	padding: 20px 5px;
+	color: #430C51;
+	font-family: "Open Sans";
+	font-size: 15px;
+}
+
+#loginButton{
+	padding-top: 5px;
+}
