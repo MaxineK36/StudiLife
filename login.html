@@ -27,7 +27,7 @@
 	<div id="loginDiv">
 		Please sign in here with your google account
     <p>
-    <button type="button" class="btn btn-default" id="loginButton" onclick="signIn(provider);"> Click Here to Sign In </button>
+    <button type="button" class="btn btn-default" id="loginButton" onclick="signIn();"> Click Here to Sign In </button>
   </p>
 	</div>
 </div>
@@ -37,7 +37,7 @@
 </div>
 
 <script>
-  console.log("11:06 version working");
+  console.log("11:08 version working");
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyB3djWUB8OEdYHsMxCOp2iTjKKrtheswDA",
@@ -51,7 +51,7 @@
   var provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/plus.login');
 
-var signIn = function(){ 
+function signIn = function(){ 
   console.log("signing in")
       firebase.auth().signInWithPopup(provider).then(function(result) {
       // This gives you a Google Access Token. You can use it to access the Google API.
