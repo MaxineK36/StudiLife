@@ -31,6 +31,9 @@
     <button type="button" class="btn btn-default" id="loginButton" onclick="signIn();"> Sign In with Google </button>
   </p>
 	</div>
+  <div id="welcomeDiv">
+    Welcome, <span id="userName"> </span>
+  </div>
 </div>
 
 
@@ -39,7 +42,10 @@
 <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
 
 <script>
-  console.log("11:20 version working");
+  console.log("11:27 version working");
+  $("#welcomeDiv").hide();
+  $("#loginDiv").show();
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyB3djWUB8OEdYHsMxCOp2iTjKKrtheswDA",
@@ -78,8 +84,29 @@ var signIn = function(){
     }).catch(function(error) {
       // An error happened.
     });
-
+    welcomeUser();
   }
+
+
+var welcomeUser = function(){
+var user = firebase.auth().currentUser;
+  var name, email, photoUrl, uid, emailVerified;
+
+  if (user != null) {
+    name = user.displayName;
+    email = user.email;
+    photoUrl = user.photoURL;
+    emailVerified = user.emailVerified;
+    uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+                     // this value to authenticate with your backend server, if
+                    // you have one. Use User.getToken() instead.
+  }
+  document.getElementById("userName").innerHTML = name
+  $("#welcomeDiv").show();
+  $("#loginDiv").hide();
+
+}
+
 </script>
 
 </body>
