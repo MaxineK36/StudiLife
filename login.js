@@ -1,4 +1,4 @@
- console.log("9:59 version working");
+ console.log("10:03 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -42,13 +42,15 @@ var signIn = function(){
     });
     
     
+  }
+var user = firebase.auth().currentUser;
+
+if (user != null){
     window.location.href = "index.html";
     welcomeUser(true);
-  }
-
+}
 
   var welcomeUser = function(openModal){
-    var user = firebase.auth().currentUser;
     var name, email, photoUrl, uid, emailVerified;
 
     if (user != null) {
@@ -61,13 +63,14 @@ var signIn = function(){
                       // you have one. Use User.getToken() instead.
     }
     if (openModal===true){
+      document.getElementById("welcomeBar").innerHTML = "Welcome, " + name;
       $('#welcomeModal').modal('show');
       openModal=false;
     }
 
 
 
-    document.getElementById("welcomeBar").innerHTML = "Welcome, " + name;
+    
 
 }
 
