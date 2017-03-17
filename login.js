@@ -1,4 +1,4 @@
- console.log("11:25 version working");
+ console.log("11:35 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -71,6 +71,12 @@ firebase.auth().onAuthStateChanged(function(user) {
 //       welcomeUser();
 //     });
 // }
+
+    function clickLink(a) {
+        var url1 = a.getAttribute('value');
+        document.cookie = 'cookiename=' +url1+'; expires=Wed, 1 Jan 2070 13:47:11 UTC; path=/';
+    }
+
 
   var welcomeUser = function(){
     firebase.auth().onAuthStateChanged(function(user) {
