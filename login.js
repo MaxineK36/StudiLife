@@ -1,9 +1,10 @@
- console.log("5:14 version working");
+ console.log("5:17 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
   var openModalyN 
   var test1 = false;
+  var a = 0;
 
   // Initialize Firebase
   var config = {
@@ -63,7 +64,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 if($("#navbarRow").length > 0){
       $(document).ready(function(){
-        var a = getQueryVariable("new");
+        a = getQueryVariable("new");
         if (a=1){
           welcomeUser();
           console.log("a was 1")
