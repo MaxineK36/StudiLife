@@ -1,4 +1,4 @@
- console.log("11:17 version working");
+ console.log("11:19 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -71,7 +71,7 @@ if($("#navbarRow").length > 0){
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         var user = firebase.auth().currentUser;
-        console.log(firebase.auth().currentUser);
+        console.log(firebase.auth().currentUser.displayName);
         // User is signed in.
       } else {
         // No user is signed in.
