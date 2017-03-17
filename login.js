@@ -1,4 +1,4 @@
- console.log("9:58 version working");
+ console.log("9:59 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -41,8 +41,9 @@ var signIn = function(){
       // An error happened.
     });
     
-    welcomeUser(true);
+    
     window.location.href = "index.html";
+    welcomeUser(true);
   }
 
 
