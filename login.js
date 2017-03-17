@@ -1,9 +1,9 @@
- console.log("1:04 version working");
+ console.log("1:09 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
   var openModalyN 
-  var test1 = false;
+  var test1 = true;
 
   // Initialize Firebase
   var config = {
@@ -72,10 +72,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 //     });
 // }
 
-    function clickLink(a) {
-        var url1 = a.getAttribute('value');
-        document.cookie = 'cookiename=' +url1+'; expires=Wed, 1 Jan 2070 13:47:11 UTC; path=/';
-    }
+    // function clickLink(a) {
+    //     var url1 = a.getAttribute('value');
+    //     document.cookie = 'cookiename=' +url1+'; expires=Wed, 1 Jan 2070 13:47:11 UTC; path=/';
+    // }
 
   var welcomeUser = function(){
     firebase.auth().onAuthStateChanged(function(user) {
