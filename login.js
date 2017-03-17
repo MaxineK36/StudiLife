@@ -1,9 +1,9 @@
- console.log("1:09 version working");
+ console.log("1:11 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
   var openModalyN 
-  var test1 = true;
+  var test1 = false;
 
   // Initialize Firebase
   var config = {
