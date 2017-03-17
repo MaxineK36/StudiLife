@@ -1,4 +1,4 @@
- console.log("10:10 version working");
+ console.log("10:11 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -51,7 +51,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     openModalyN = true;
     window.location.href = "index.html";
-    welcomeUser(openModal?);
+    welcomeUser(openModalyN);
     // User is signed in.
   } else {
     // No user is signed in.
