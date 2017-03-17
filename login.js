@@ -1,4 +1,4 @@
- console.log("10:23 version working");
+ console.log("10:26 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -38,17 +38,7 @@ var signIn = function(){
       var credential = error.credential;
       // ...
     });
-    var name, email, photoUrl, uid, emailVerified;
-    console.log("starting to welcome user")
-    if (user != null) {
-      name = user.displayName;
-      email = user.email;
-      photoUrl = user.photoURL;
-      emailVerified = user.emailVerified;
-      uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
-                       // this value to authenticate with your backend server, if
-                      // you have one. Use User.getToken() instead.
-    }
+
     firebase.auth().signOut().then(function() {
       // Sign-out successful.
     }).catch(function(error) {
@@ -61,10 +51,6 @@ var user = firebase.auth().currentUser;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if ((user)&&(test1===true)) {
-    console.log("opening modal")
-      document.getElementById("welcomeBar").innerHTML = "Welcome, " + name;
-      $('#welcomeModal').modal('show');
-    alert("HEYYY")
     window.location.href = "index.html";
     setTimeout(100);
     console.log("someone is signed in")
@@ -78,7 +64,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   var welcomeUser = function(){
     var name, email, photoUrl, uid, emailVerified;
-    console.log("starting to welcome user")
+    console.log("starting to welcome user");
     if (user != null) {
       name = user.displayName;
       email = user.email;
