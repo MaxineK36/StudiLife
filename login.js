@@ -1,4 +1,4 @@
- console.log("11:19 version working");
+ console.log("11:20 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -72,6 +72,9 @@ if($("#navbarRow").length > 0){
       if (user) {
         var user = firebase.auth().currentUser;
         console.log(firebase.auth().currentUser.displayName);
+        console.log("opening modal")
+        document.getElementById("welcomeBar").innerHTML = "Welcome, " + firebase.auth().currentUser.displayName;
+        $('#welcomeModal').modal('show');
         // User is signed in.
       } else {
         // No user is signed in.
@@ -79,21 +82,7 @@ if($("#navbarRow").length > 0){
     });
     
 
-  // var name, email, photoUrl, uid, emailVerified;
-  //   console.log("starting to welcome user");
-  //   if (user != null) {
-  //     name = user.displayName;
-  //     email = user.email;
-  //     photoUrl = user.photoURL;
-  //     emailVerified = user.emailVerified;
-  //     uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
-  //                      // this value to authenticate with your backend server, if
-  //                     // you have one. Use User.getToken() instead.
-  //   }
-  //   console.log(firebase.auth().currentUser);
-  //     console.log("opening modal")
-  //     document.getElementById("welcomeBar").innerHTML = "Welcome, " + firebase.auth().currentUser.displayName;
-  //     $('#welcomeModal').modal('show');
+    
   
 }
 
