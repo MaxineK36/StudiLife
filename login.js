@@ -1,4 +1,4 @@
- console.log("10:30 version working");
+ console.log("10:31 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -82,10 +82,7 @@ if($("#navbarRow").length > 0){
       console.log("opening modal")
       document.getElementById("welcomeBar").innerHTML = "Welcome, " + name;
       $('#welcomeModal').modal('show');
-      break;
-
-    
-
+  
 }
 
 
