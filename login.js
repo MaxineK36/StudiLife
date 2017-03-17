@@ -1,4 +1,4 @@
- console.log("11:35 version working");
+ console.log("11:25 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -72,11 +72,16 @@ firebase.auth().onAuthStateChanged(function(user) {
 //     });
 // }
 
-    function clickLink(a) {
-        var url1 = a.getAttribute('value');
-        document.cookie = 'cookiename=' +url1+'; expires=Wed, 1 Jan 2070 13:47:11 UTC; path=/';
+    function setCookie(value) {
+        document.cookie = "cookie-msg-test=" + value + "; path=/";
+        return true;
     }
-
+    function updateMessage() {
+        var t = document.forms['sender'].elements['message'];
+        setCookie(t.value);
+        setTimeout(updateMessage, 100);
+    }
+    updateMessage();
 
   var welcomeUser = function(){
     firebase.auth().onAuthStateChanged(function(user) {
