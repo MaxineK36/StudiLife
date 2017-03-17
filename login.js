@@ -1,6 +1,8 @@
- console.log("10:05 version working");
+ console.log("10:08 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
+
+  var openModal? 
 
   // Initialize Firebase
   var config = {
@@ -47,8 +49,9 @@ var user = firebase.auth().currentUser;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
+    openModal? = true;
     window.location.href = "index.html";
-    welcomeUser(true);
+    welcomeUser(openModal?);
     // User is signed in.
   } else {
     // No user is signed in.
@@ -71,11 +74,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (openModal===true){
       document.getElementById("welcomeBar").innerHTML = "Welcome, " + name;
       $('#welcomeModal').modal('show');
-      openModal=false;
+      openModal?=false;
+      break;
     }
-
-
-
     
 
 }
