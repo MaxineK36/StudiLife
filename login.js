@@ -1,4 +1,4 @@
- console.log("11:00 version working");
+ console.log("11:09 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -81,7 +81,7 @@ if($("#navbarRow").length > 0){
                        // this value to authenticate with your backend server, if
                       // you have one. Use User.getToken() instead.
     }
-    console.log(firebase.auth().currentUser.displayName);
+    console.log(firebase.auth().currentUser);
       console.log("opening modal")
       document.getElementById("welcomeBar").innerHTML = "Welcome, " + firebase.auth().currentUser.displayName;
       $('#welcomeModal').modal('show');
