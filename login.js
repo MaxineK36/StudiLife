@@ -1,4 +1,4 @@
- console.log("11:20 version working");
+ console.log("11:25 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -52,6 +52,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   if ((user)&&(test1===true)) {
     alert(firebase.auth().currentUser.displayName);
     window.location.href = "index.html";
+    if($("#navbarRow").length > 0){
+      $(document).ready(function(){
+        welcomeUser();
+      });
+    }
     setTimeout(100);
     console.log("someone is signed in")
     
@@ -61,11 +66,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-if($("#navbarRow").length > 0){
-    $(document).ready(function(){
-      welcomeUser();
-    });
-}
+// if($("#navbarRow").length > 0){
+//     $(document).ready(function(){
+//       welcomeUser();
+//     });
+// }
 
   var welcomeUser = function(){
     firebase.auth().onAuthStateChanged(function(user) {
