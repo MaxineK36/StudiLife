@@ -1,8 +1,6 @@
- console.log("9:55 version working");
+ console.log("9:58 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
-
-  var openModal;
 
   // Initialize Firebase
   var config = {
@@ -42,8 +40,9 @@ var signIn = function(){
     }).catch(function(error) {
       // An error happened.
     });
-    welcomeUser();
-    openModal = true;
+    
+    welcomeUser(true);
+    window.location.href = "index.html";
   }
 
 
@@ -66,7 +65,6 @@ var signIn = function(){
     }
 
 
-   
 
     document.getElementById("welcomeBar").innerHTML = "Welcome, " + name;
 
