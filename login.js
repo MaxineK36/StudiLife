@@ -1,4 +1,4 @@
- console.log("1:18 version working");
+ console.log("3:22 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -59,6 +59,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
     setTimeout(100);
     console.log("someone is signed in")
+    test1=false;
     
     // User is signed in.
   } else {
