@@ -1,4 +1,4 @@
- console.log("5:19 version working");
+ console.log("5:20 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -66,7 +66,7 @@ if($("#navbarRow").length > 0){
       $(document).ready(function(){
         a = getQueryVariable("new");
         console.log("a is "+a)
-        if (a=1){
+        if (a==1){
           welcomeUser();
           console.log("a was 1")
         }
