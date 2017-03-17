@@ -1,4 +1,4 @@
- console.log("10:03 version working");
+ console.log("10:05 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -45,10 +45,16 @@ var signIn = function(){
   }
 var user = firebase.auth().currentUser;
 
-if (user != null){
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
     window.location.href = "index.html";
     welcomeUser(true);
-}
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+});
+
 
   var welcomeUser = function(openModal){
     var name, email, photoUrl, uid, emailVerified;
