@@ -1,8 +1,9 @@
- console.log("10:11 version working");
+ console.log("10:13 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
   var openModalyN 
+  var test1 = false;
 
   // Initialize Firebase
   var config = {
@@ -19,6 +20,7 @@
   provider.addScope('https://www.googleapis.com/auth/plus.login');
 
 var signIn = function(){ 
+  test1=true;
   console.log("signing in")
       firebase.auth().signInWithPopup(provider).then(function(result) {
       // This gives you a Google Access Token. You can use it to access the Google API.
@@ -48,7 +50,7 @@ var signIn = function(){
 var user = firebase.auth().currentUser;
 
 firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
+  if ((user)&&(test1===true)) {
     openModalyN = true;
     window.location.href = "index.html";
     welcomeUser(openModalyN);
