@@ -20,18 +20,18 @@
 
 <script>
 $(document).ready(function()
-{
-  function getCookie(cookiename)
-      {
-        var re = new RegExp(rgcookie + "=([^;]+)");
-        var value = re.exec(document.cookie);
-        return (value != null) ? unescape(value[1]) : null;
-      }
-    var url1 = getCookie("cookiename");
-    function clickLink(a) {
-    var url2 = a.getAttribute('value');
-    window.location.assign("http://domain/"+url1+url2);
-    }
+{ console.log("also, 1:04")
+  // function getCookie(cookiename)
+  //     {
+  //       var re = new RegExp(rgcookie + "=([^;]+)");
+  //       var value = re.exec(document.cookie);
+  //       return (value != null) ? unescape(value[1]) : null;
+  //     }
+  //   var url1 = getCookie("cookiename");
+  //   function clickLink(a) {
+  //   var url2 = a.getAttribute('value');
+  //   window.location.assign("http://domain/"+url1+url2);
+  //   }
   $(".collapseUnit").hide();
   $(".toggleUnits").click(function(){
     $(this).parents().parents().next(".collapseUnit").slideToggle(300, function()
