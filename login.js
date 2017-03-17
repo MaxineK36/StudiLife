@@ -1,4 +1,4 @@
- console.log("10:13 version working");
+ console.log("10:16 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -51,9 +51,9 @@ var user = firebase.auth().currentUser;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if ((user)&&(test1===true)) {
-    openModalyN = true;
     window.location.href = "index.html";
-    welcomeUser(openModalyN);
+    welcomeUser();
+    console.log("someone is signed in")
     // User is signed in.
   } else {
     // No user is signed in.
@@ -61,9 +61,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 
-  var welcomeUser = function(openModal){
+  var welcomeUser = function(){
     var name, email, photoUrl, uid, emailVerified;
-
+    console.log("starting to welcome user")
     if (user != null) {
       name = user.displayName;
       email = user.email;
@@ -73,12 +73,11 @@ firebase.auth().onAuthStateChanged(function(user) {
                        // this value to authenticate with your backend server, if
                       // you have one. Use User.getToken() instead.
     }
-    if (openModal===true){
+      console.log("opening modal")
       document.getElementById("welcomeBar").innerHTML = "Welcome, " + name;
       $('#welcomeModal').modal('show');
-      openModalyN=false;
       break;
-    }
+
     
 
 }
