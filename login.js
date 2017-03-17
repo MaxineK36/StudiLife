@@ -1,4 +1,4 @@
- console.log("10:32 version working");
+ console.log("10:35 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -80,6 +80,7 @@ if($("#navbarRow").length > 0){
                        // this value to authenticate with your backend server, if
                       // you have one. Use User.getToken() instead.
     }
+    console.log(name);
       console.log("opening modal")
       document.getElementById("welcomeBar").innerHTML = "Welcome, " + name;
       $('#welcomeModal').modal('show');
