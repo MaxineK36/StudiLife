@@ -1,4 +1,4 @@
- console.log("3:24 version working");
+ console.log("3:25 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -52,8 +52,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   if ((user)&&(test1===true)) {
     alert(firebase.auth().currentUser.displayName);
     window.location.href = "index.html";
-    
-    }
     setTimeout(100);
     console.log("someone is signed in")
     test1=false;
@@ -68,6 +66,7 @@ if($("#navbarRow").length > 0){
       $(document).ready(function(){
         welcomeUser();
       });
+    }
 
 // if($("#navbarRow").length > 0){
 //     $(document).ready(function(){
