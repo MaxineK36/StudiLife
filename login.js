@@ -1,4 +1,4 @@
- console.log("5:12 version working");
+ console.log("5:14 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -64,7 +64,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 if($("#navbarRow").length > 0){
       $(document).ready(function(){
         var a = getQueryVariable("new");
-        if (a===1){
+        if (a=1){
           welcomeUser();
           console.log("a was 1")
         }
