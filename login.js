@@ -1,4 +1,4 @@
- console.log("10:20 version working");
+ console.log("10:21 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -51,10 +51,10 @@ var user = firebase.auth().currentUser;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if ((user)&&(test1===true)) {
+    welcomeUser();
     alert("HEYYY")
     window.location.href = "index.html";
     setTimeout(100);
-    welcomeUser();
     console.log("someone is signed in")
     
     // User is signed in.
