@@ -1,4 +1,4 @@
- console.log("1:11 version working");
+ console.log("1:18 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
