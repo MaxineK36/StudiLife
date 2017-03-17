@@ -1,4 +1,4 @@
- console.log("10:35 version working");
+ console.log("10:42 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -72,7 +72,7 @@ if($("#navbarRow").length > 0){
     var name, email, photoUrl, uid, emailVerified;
     console.log("starting to welcome user");
     if (user != null) {
-      name = user.displayName;
+      name = firebase.auth().currentUser.displayName;
       email = user.email;
       photoUrl = user.photoURL;
       emailVerified = user.emailVerified;
