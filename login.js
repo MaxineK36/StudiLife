@@ -1,4 +1,4 @@
- console.log("10:26 version working");
+ console.log("10:30 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -61,6 +61,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
+if($("#navbarRow").length > 0){
+    $(document).ready(function(){
+      welcomeUser();
+    });
+}
 
   var welcomeUser = function(){
     var name, email, photoUrl, uid, emailVerified;
