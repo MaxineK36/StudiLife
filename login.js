@@ -1,4 +1,4 @@
- console.log("3:25 version working");
+ console.log("5:12 version working");
   $("#welcomeDiv").hide();
   $("#loginDiv").show();
 
@@ -50,8 +50,7 @@ var signIn = function(){
 
 firebase.auth().onAuthStateChanged(function(user) {
   if ((user)&&(test1===true)) {
-    alert(firebase.auth().currentUser.displayName);
-    window.location.href = "index.html";
+    window.location.href = "index.html?new=1";
     setTimeout(100);
     console.log("someone is signed in")
     test1=false;
@@ -64,7 +63,14 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 if($("#navbarRow").length > 0){
       $(document).ready(function(){
-        welcomeUser();
+        var a = getQueryVariable("new");
+        if (a===1){
+          welcomeUser();
+          console.log("a was 1")
+        }
+        else{
+          console.log("a was not 1")
+        }
       });
     }
 
@@ -78,6 +84,17 @@ if($("#navbarRow").length > 0){
     //     var url1 = a.getAttribute('value');
     //     document.cookie = 'cookiename=' +url1+'; expires=Wed, 1 Jan 2070 13:47:11 UTC; path=/';
     // }
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
 
   var welcomeUser = function(){
     firebase.auth().onAuthStateChanged(function(user) {
