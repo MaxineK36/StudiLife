@@ -3,7 +3,7 @@ var classID = getQueryVariable("classID")
 
 var chatRefKey = "chats/" +"classes/" + classID;
 
-console.log("chat 4:29")
+console.log("chat 4:31")
 
 // var element = document.getElementById("chatBox");
 // element.scrollTop = element.scrollHeight;
@@ -69,7 +69,7 @@ function addChatMoment(){
 		console.log(authortemp)
 	 	arraySize = Object.size(snapshot.val());
 		var thisChatText = document.getElementById("chatInput").value;
-		var thisChatAuthor = "me"
+		var thisChatAuthor = authortemp
 		var tempChat = new chatMoment(thisChatText,thisChatAuthor) 
 		// alert("hey")
 		// console.log(tempChat)
