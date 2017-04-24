@@ -3,6 +3,8 @@ var classID = getQueryVariable("classID")
 
 var chatRefKey = "chats/" +"classes/" + classID;
 
+console.log("chat 4:29")
+
 // var element = document.getElementById("chatBox");
 // element.scrollTop = element.scrollHeight;
 
@@ -62,6 +64,9 @@ function addChatMoment(){
 //insert key here
 	var arraySize
 	firebase.database().ref(chatRefKey).once('value').then(function(snapshot) {
+		var user = firebase.auth().currentUser;
+		var authortemp = (firebase.auth().currentUser.displayName);
+		console.log(authortemp)
 	 	arraySize = Object.size(snapshot.val());
 		var thisChatText = document.getElementById("chatInput").value;
 		var thisChatAuthor = "me"
@@ -104,58 +109,3 @@ function loadChats(){
 	 })
 
 }
-
-
-// function resetHomeworks(){
-// 	document.getElementById("homeworkTable").innerHTML = null;
-
-// 	firebase.database().ref(HWrefKey).once('value').then(function(snapshot) {
-// 	  console.log(snapshot.val());
-// 	  // console.log("running")
-// 	  var size = Object.size(snapshot.val());
-// 	  var maxCount = size+1
-// 	  console.log("size is: "+size)
-// 	  var keepGoing = true;
-// 	  var j=0;
-// 	  successCounter=0;
-// 	  for(var i=0; successCounter<size; i++){
-
-// 	  	if (snapshot.val()[i]!=null){
-// 		 	var dueDate = snapshot.val()[i].dueDate;
-// 			console.log("due Date: " +dueDate);
-// 			var assignmentTitle = snapshot.val()[i].assignmentTitle
-// 			console.log("assignment title: " + assignmentTitle) 	
-// 					var hwID = snapshot.val()[i].ID
-
-// 			var newRow = document.createElement("tr");
-// 			  	var dueDateData = document.createElement("td");
-// 			  	var assignmentTitleData = document.createElement("td") 
-// 			  	dueDateData.innerHTML = dueDate;
-// 			  	$(dueDateData).addClass("dueDate");
-// 			  	assignmentTitleData.innerHTML = assignmentTitle;
-// 			  	newRow.appendChild(dueDateData); 
-// 			  	newRow.appendChild(assignmentTitleData); 
-// 			  	var newX = document.createElement("button")
-// 			  	$(newX).addClass("glyphicon glyphicon-remove btn btn-default xButton "+hwID);
-// 			  	$(newX).id="hw"+hwID;
-// 			  	console.log(hwID)
-
-// 			  	// var onclick = "deleteHW("+classID+"," + i + ")"
-			  	
-// 			  	$(newX).val(hwID);
-// 			  	$(newX).on("click",	function(){ deleteHW(classID,$(this).val())})
-// 				newRow.appendChild(newX);		  	// <span class="glyphicon glyphicon-remove"></span>
-// 			  	document.getElementById("homeworkTable").appendChild(newRow);
-// 			successCounter++
-// 			if (successCounter==size){
-// 				// alert("the end");
-// 				lastKey=i;
-// 				// alert("last key "+lastKey)
-// 			}
-// 		}	
-// 	  }
-
-// 	});
-// }
-
-
