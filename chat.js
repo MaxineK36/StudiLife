@@ -3,7 +3,7 @@ var classID = getQueryVariable("classID")
 
 var chatRefKey = "chats/" +"classes/" + classID;
 
-console.log("chat 4:31")
+console.log("chat 4:43")
 
 // var element = document.getElementById("chatBox");
 // element.scrollTop = element.scrollHeight;
@@ -83,6 +83,11 @@ function addChatMoment(){
 	})
 
 }
+
+var starCountRef = firebase.database().ref(chatRefKey);
+starCountRef.on('value', function(snapshot) {
+  loadChats
+});
 
 function loadChats(){
 
