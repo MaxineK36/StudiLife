@@ -21,17 +21,7 @@
 <script>
 $(document).ready(function()
 { console.log("also, 1:04")
-  // function getCookie(cookiename)
-  //     {
-  //       var re = new RegExp(rgcookie + "=([^;]+)");
-  //       var value = re.exec(document.cookie);
-  //       return (value != null) ? unescape(value[1]) : null;
-  //     }
-  //   var url1 = getCookie("cookiename");
-  //   function clickLink(a) {
-  //   var url2 = a.getAttribute('value');
-  //   window.location.assign("http://domain/"+url1+url2);
-  //   }
+
   $(".collapseUnit").hide();
   $(".toggleUnits").click(function(){
     $(this).parents().parents().next(".collapseUnit").slideToggle(300, function()
@@ -48,12 +38,6 @@ $(document).ready(function()
 
 <!-- setting up page layout -->
 <div class="container fullWidth">
-
-<!--     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#welcomeModal">
-  Launch demo modal
-</button> -->
-
-
 
   <div class="row">
     <img src="logo.png" id="logo">
@@ -73,8 +57,8 @@ $(document).ready(function()
     <div class = "navbar-collapse collapse fullWidth2" id="navbarRow">
       <ul class = "nav navbar-nav">
         <li class ="active"> <a href="index.html"> Home </a> <li>
-        <li> <a href="graph.html"> Class Groups </a> </li>
-        <li> <a href="about.html"> Project Groups </a> </li>
+        <li> <a href="classHome.html"> Class Groups </a> </li>
+        <li> <a href="groupHome.html"> Project Groups </a> </li>
         <li> <a href="about.html"> My Tasks </a> </li>
         <li> <a href="about.html"> My Calendar </a> </li>
         <li> <a href="about.html"> Profile </a> </li>
@@ -297,7 +281,10 @@ $(document).ready(function()
 
 </div>
 <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+<script src="firebaseConfig.js"> </script>
 <script src="login.js"> </script>
+<script src="databases.js"> </script>
+
 
 </body>
 

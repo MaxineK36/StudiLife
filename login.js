@@ -6,16 +6,16 @@
   var test1 = false;
   var a = 0;
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyB3djWUB8OEdYHsMxCOp2iTjKKrtheswDA",
-    authDomain: "studilife-7a2fc.firebaseapp.com",
-    databaseURL: "https://studilife-7a2fc.firebaseio.com",
-    storageBucket: "studilife-7a2fc.appspot.com",
-    messagingSenderId: "910045511452"
-  };
+  // Initialize Firebase (should now be done externally)
+  // var config = {
+  //   apiKey: "AIzaSyB3djWUB8OEdYHsMxCOp2iTjKKrtheswDA",
+  //   authDomain: "studilife-7a2fc.firebaseapp.com",
+  //   databaseURL: "https://studilife-7a2fc.firebaseio.com",
+  //   storageBucket: "studilife-7a2fc.appspot.com",
+  //   messagingSenderId: "910045511452"
+  // };
 
-  firebase.initializeApp(config);
+  // firebase.initializeApp(config);
 
   var provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/plus.login');
@@ -86,8 +86,7 @@ if($("#navbarRow").length > 0){
     //     var url1 = a.getAttribute('value');
     //     document.cookie = 'cookiename=' +url1+'; expires=Wed, 1 Jan 2070 13:47:11 UTC; path=/';
     // }
-function getQueryVariable(variable)
-{
+function getQueryVariable(variable){
        var query = window.location.search.substring(1);
        var vars = query.split("&");
        for (var i=0;i<vars.length;i++) {

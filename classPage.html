@@ -1,0 +1,282 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel = "stylesheet" href = "overrides.css">
+  <link rel = "stylesheet" href = "classPage.css">
+    <link rel = "stylesheet" href = "sweetAlerts.css">
+
+
+<!--   <link rel = "stylesheet" href = "index.css">
+ -->  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,bold,semibold|Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- <script type="text/javascript" src="sweetAlerts.js"></script> -->
+
+</head>
+
+<script>
+$(document).ready(function(){ console.log("also, 1:04")
+  setupPage();
+
+  $(".collapseUnit").show();
+  $(".toggleUnits").click(function(){
+    $(this).parents().parents().next(".collapseUnit").slideToggle(300, function()
+    {
+
+    });
+  });
+});
+  </script>
+
+<body>
+
+
+
+<!-- setting up page layout -->
+<div class="container fullWidth">
+
+  <div class="row">
+    <img src="logo.png" id="logo">
+  </div>
+  <div class="row" >
+    <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+              </button>
+              <!-- <a class="navbar-brand" href="http://www.barnesandnoble.com/"> <img src="studilife.png"> </a> -->
+      </div>
+  
+    <div class = "navbar-collapse collapse fullWidth2" id="navbarRow">
+      <ul class = "nav navbar-nav">
+        <li> <a href="index.html"> Home </a> <li>
+        <li  class ="active"> <a href="classHome.html"> Class Groups </a> </li>
+        <li> <a href="groupHome.html"> Project Groups </a> </li>
+        <li> <a href="about.html"> My Tasks </a> </li>
+        <li> <a href="about.html"> My Calendar </a> </li>
+        <li> <a href="about.html"> Profile </a> </li>
+        <li> <a href="about.html"> Settings </a> </li>
+        <li> <a href="login.html"> Login </a> </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div class="row"> 
+  <div class="col-md-7">
+    <div id="classImage"> </div>
+    <div class="classHeader"> 
+      <p id="className"> </p>
+      <p id="classTeacher"> </p>
+      <p> <span id="classBlock"> </span>
+        <span id="classSemester"> </span>
+        <span id="classYear"> </span>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <!-- <form ng-submit="uploadFile()">
+        <input type="file" name="file" class="inputimg" id="nameImg" accept="image/*">
+        <br />
+        <span class="input-group-btn">
+                <button  type="submit" class="btn btn-block">Upload Image 
+                  <i class="material-icons">send</i>
+                </button>
+          </span>
+      </form> -->
+      <!-- chat window -->
+
+
+      <div class="panel panel-default chatWindow">
+        <div class="panel-heading">
+          <p class="panel-title chatHead myHeader2">
+            <a class="toggleUnits"> Chat </a> 
+               </p>
+               </div>
+        <div class = "collapseUnit">
+          <div class="panel-body chats"> 
+            <div  id="chatBox">
+            </div>
+             <!--   <p> Mary: hey guys did you understand the hw? </p>
+               <p> John: no lol it was so confusing idk </p>
+               <p> Mary: ugh does anyone else get it? </p>
+                <p> Jane: Ya i think I figured it out it wasn’t that bad </p>
+                <p> Mary: … </p>
+                <p> Jane: hang on lm find it and i’ll help you </p> -->
+              <div class="textEntryBox input-group"> 
+                <input class="form-control" type="text" placeholder="type here to chat..." id="chatInput">
+                 <div class="input-group-addon btn btn-default submitButton" id="chatSubmit" onclick="addChatMoment()"> Send </div>
+              </div>
+          </div>
+        </div>
+      </div> 
+
+
+      <div class="panel panel-default documentWindow">
+        <div class="panel-heading">
+          <p class="panel-title homeworkHead myHeader2">
+            <a class="toggleUnits"> Homework </a> 
+              <!-- Title of the chat goes in here--> </p>
+               </div>
+        <div class = "collapseUnit">
+          <div class="panel-body homework"> <!-- Body of the chat goes in here-->
+               <table style="width:100%" id="homeworkDataTable">
+                <tr>
+                  <th class="dueDate">Due:</th>
+                  <th>Assignment Name</th> 
+                </tr>
+                
+              </table>
+           
+
+<!-- 
+    <button class="btn btn-lg btn-warning sweet-13" onclick="_gaq.push(['_trackEvent', 'example, 'try', 'Warning']);">Warning</button>
+ -->
+
+   <!--  <div class="sweet-alert  showSweetAlert visible" tabindex="-1" data-custom-class="" data-has-cancel-button="true" data-has-confirm-button="true" data-allow-outside-click="false" data-has-done-function="false" data-animation="pop" data-timer="null" style="display: block; margin-top: -175px;"><div class="sa-icon sa-error" style="display: none;">
+          <span class="sa-x-mark">
+            <span class="sa-line sa-left"></span>
+            <span class="sa-line sa-right"></span>
+          </span>
+        </div><div class="sa-icon sa-warning pulseWarning" style="display: block;">
+          <span class="sa-body pulseWarningIns"></span>
+          <span class="sa-dot pulseWarningIns"></span>
+        </div><div class="sa-icon sa-info" style="display: none;"></div><div class="sa-icon sa-success" style="display: none;">
+          <span class="sa-line sa-tip"></span>
+          <span class="sa-line sa-long"></span>
+
+          <div class="sa-placeholder"></div>
+          <div class="sa-fix"></div>
+        </div><div class="sa-icon sa-custom" style="display: none;"></div><h2>Are you sure?</h2>
+        <p class="lead text-muted " style="display: block;">You will not be able to recover this imaginary file!</p>
+        <div class="form-group">
+          <input type="text" class="form-control" tabindex="3" placeholder="">
+          <span class="sa-input-error help-block">
+            <span class="glyphicon glyphicon-exclamation-sign"></span> <span class="sa-help-text">Not valid</span>
+          </span>
+        </div><div class="sa-button-container">
+          <button class="cancel btn btn-lg btn-default" tabindex="2" style="display: inline-block;">Cancel</button>
+          <div class="sa-confirm-button-container">
+            <button class="confirm btn btn-lg btn-warning" tabindex="1" style="display: inline-block;">Warning!</button><div class="la-ball-fall">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div></div> -->
+
+
+
+
+
+               <table style="width:100%" id="homeworkTable">
+
+              </table>
+
+               <button type="button" class="btn btn-default addAssignmentButton" onclick="addHomework()">Add Assignment</button>
+
+               <div class="modal fade" id="addHomework" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <!-- close button (x) at the top right -->
+                       <p>  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span> </button> </p>
+
+                        <!-- date selector -->
+                        <p class="formHeader requiredEntry"> <span style="color: red">*</span>Due Date </p>
+                        <input type="text" class="form-control" id="dueDate" placeholder="ex: 1/15" aria-describedby="basic-addon1">
+
+                        <!-- teacher selector -->
+                        <p class="formHeader requiredEntry"> <span style="color: red">*</span>Assignment Title </p>
+                        <input type="text" class="form-control" id="assignmentTitle" placeholder="ex: Fill out Telephones Portables sheet" aria-describedby="basic-addon1">
+
+                        <button type="button" class="btn btn-default submitButton" onclick="createHomeworkAssignment()">Submit</button>
+ 
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="hwDeleteConfirm" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <p style="text-align: center;"> Are you sure you want to delete this homework? </p>
+                        <form>
+                          <div class="radio">
+                            <label> <input type="radio" class="radioButton" name="optradio" onclick="$('#hwDeleteConfirm').modal('hide')" id="yesButton">  <p class="choice"> Yes </p> </label>
+                          </div>
+                          <div class="radio">
+                            <label> <input type="radio" class="radioButton" name="optradio" onclick="$('#hwDeleteConfirm').modal('hide')" id="noButton"> <p  class="choice"> No </p></label>
+                          </div>
+                        </form>
+
+                        <!-- <button type="button" class="btn btn-default yesButton" onclick="createHomeworkAssignment()">Yes</button>
+
+                         <button type="button" class="btn btn-default noButton" onclick="createHomeworkAssignment()">No</button> -->
+
+ 
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- <div class="textEntryBox input-group"> 
+                <input class="form-control" type="text" placeholder="type here to chat..." id="example-text-input">
+                 <div class="input-group-addon"><a href="hi">Send</a></div>
+              </div> -->
+          </div>
+        </div>
+      </div> 
+
+      <div class="panel panel-default documentWindow">
+        <div class="panel-heading">
+          <p class="panel-title documentHead myHeader2">
+            <a class="toggleUnits"> Documents </a> 
+              <!-- Title of the chat goes in here--> </p>
+               </div>
+        <div class = "collapseUnit">
+          <div class="panel-body documents"> <!-- Body of the chat goes in here-->
+               <p> Document 1 </p>
+               <p> Document 2 </p>
+               <p> Document 3 </p>
+
+              <!-- <div class="textEntryBox input-group"> 
+                <input class="form-control" type="text" placeholder="type here to chat..." id="example-text-input">
+                 <div class="input-group-addon"><a href="hi">Send</a></div>
+              </div> -->
+          </div>
+        </div>
+      </div> 
+  </div>
+
+
+
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+<script src="firebaseConfig.js"> </script>
+<script src="classPage.js"> </script>
+<script src="chat.js"> </script>
+
+</body>
+
+
+</html>

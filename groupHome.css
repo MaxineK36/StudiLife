@@ -1,0 +1,33 @@
+#noGroups{
+	border: solid 1px #430C51;
+	border-radius: 25px;
+	background-color: rgba(220, 222, 224, 0.85);	
+	margin-top: 20%;
+	height: auto;
+	text-align: center;
+	padding: 10px 2px;
+	color: #430C51;
+	font-family: "Open Sans";
+	font-size: 15px;
+
+}
+
+#createGroupModal{
+	margin-top: 5%;
+}
+
+.formHeader{
+	margin-bottom: 0;
+	margin-top: 1%;
+	padding: 2px;
+}
+
+#groupSubmitButton{
+	margin-left: 45%;
+	margin-right: 45%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+
+	background-color: rgb(248, 248, 248);
+	border-color: rgb(166, 166, 166);
+}

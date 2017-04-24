@@ -1,0 +1,54 @@
+From classpage.js 
+	  // if (size != 0){
+		 //  for (var i=0; i<(size+10); i++){
+		 //  	console.log("first i is "+i)
+		 //  	// console.log("running, 2")
+		 //  	
+	  // 		if (snapshot.val()[i].include==1){
+		 //  		console.log("i is "+i)
+		 //  		var hwID = snapshot.val()[i].ID
+
+			//   	var dueDate = snapshot.val()[i].dueDate;
+			//   	console.log("due Date: " +dueDate);
+			//   	var assignmentTitle = snapshot.val()[i].assignmentTitle
+			//   	console.log("assignment title: " + assignmentTitle)
+
+		 //  	// document.getElementById("groupList").innerHTML = null;
+
+			//   	var newRow = document.createElement("tr");
+			//   	var dueDateData = document.createElement("td");
+			//   	var assignmentTitleData = document.createElement("td") 
+			//   	dueDateData.innerHTML = dueDate;
+			//   	$(dueDateData).addClass("dueDate");
+			//   	assignmentTitleData.innerHTML = assignmentTitle;
+			//   	newRow.appendChild(dueDateData); 
+			//   	newRow.appendChild(assignmentTitleData); 
+			//   	var newX = document.createElement("button")
+			//   	$(newX).addClass("glyphicon glyphicon-remove btn btn-default xButton "+hwID);
+			//   	$(newX).id="hw"+hwID;
+			//   	console.log(hwID)
+
+			//   	// var onclick = "deleteHW("+classID+"," + i + ")"
+			  	
+			//   	$(newX).val(hwID);
+			//   	$(newX).on("click",	function() { 
+			//   		var tempRefKey = HWrefKey+"/"+$(this).val();
+			//   		firebase.database().ref(tempRefKey).remove();
+			//   		setupPage();
+
+			//   		console.log("Your class ID is "+classID+" and your hwID is "+ $(this).val())
+			//   		// alert("hi guys "+ $(this).val()) 
+			//   	});
+			//   	// var tempRefKey = HWrefKey+"/"+$(this).val()
+			//   	// firebase.database().ref('users/ada').remove()
+
+			//   		// deleteHW(classID,$(this).val())) 
+
+			  	
+			//   	//these two lines
+
+			// 	newRow.appendChild(newX);		  	// <span class="glyphicon glyphicon-remove"></span>
+			//   	document.getElementById("homeworkTable").appendChild(newRow);
+		 //  	}
+		 //  }
+		 // }
