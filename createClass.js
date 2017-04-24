@@ -1,4 +1,5 @@
 //Note: functions are used in reverse order of the order they're listed in
+console.log("create class 4:32")
 
 
 var database = firebase.database();
@@ -53,7 +54,7 @@ function updatePage(){
 	  		var newListItem = document.createElement("li");  
 
 	  		//sets it up as a link to the page for that class, names it the course name
-	  		newListItem.innerHTML = "<a href='classpage.html?classID=" + i + "'> " + snapshot.val()[i].courseName +" </a>"
+	  		newListItem.innerHTML = "<a href='classPage.html?classID=" + i + "'> " + snapshot.val()[i].courseName +" </a>"
 
 	  		//adds the item to the list
 			document.getElementById("groupList").appendChild(newListItem);
