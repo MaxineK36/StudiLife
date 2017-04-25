@@ -3,7 +3,7 @@ var classID = getQueryVariable("classID")
 
 var chatRefKey = "chats/" +"classes/" + classID;
 
-console.log("chat 9:00")
+console.log("chat 9:06")
 
 // var element = document.getElementById("chatBox");
 // element.scrollTop = element.scrollHeight;
@@ -74,10 +74,11 @@ function addChatMoment(){
 		// alert("hey")
 		// console.log(tempChat)
 		updateChatData(arraySize,tempChat)
-		var newLine = document.createElement("p")
-		newLine.innerHTML="<span style='font-weight: bold'>"+thisChatAuthor+": </span>"+thisChatText
-		document.getElementById("chatBox").appendChild(newLine)
-		var elem = document.getElementById('chatBox');
+
+		// var newLine = document.createElement("p")
+		// newLine.innerHTML="<span style='font-weight: bold'>"+thisChatAuthor+": </span>"+thisChatText
+		// document.getElementById("chatBox").appendChild(newLine)
+		// var elem = document.getElementById('chatBox');
 	  	elem.scrollTop = elem.scrollHeight;
 	  	console.log("test")
 	})
