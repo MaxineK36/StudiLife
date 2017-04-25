@@ -1,4 +1,4 @@
-console.log("classpage 9:00")
+console.log("classpage 9:09")
 
 var database = firebase.database();
 var successCounter = 0;
@@ -174,3 +174,7 @@ function createHomeworkAssignment(){
 
 }
 
+var HWRef = firebase.database().ref(HWrefKey);
+HWRef.on('value', function(snapshot) {
+  resetHomeworks();
+});
