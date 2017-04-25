@@ -1,4 +1,4 @@
-console.log("classpage 9:09")
+console.log("classpage 9:13")
 
 var database = firebase.database();
 var successCounter = 0;
@@ -144,7 +144,7 @@ function updateHWData(number,object){
 
 	//updates it using the object created previously, at the refKey
 	firebase.database().ref(newRefKey).set(object);
-	resetHomeworks();
+	// resetHomeworks();
 }
 
 // updateData(0,0)
