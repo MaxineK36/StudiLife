@@ -3,7 +3,7 @@ var classID = getQueryVariable("classID")
 
 var chatRefKey = "chats/" +"classes/" + classID;
 
-console.log("chat 4:47")
+console.log("chat 9:51")
 
 // var element = document.getElementById("chatBox");
 // element.scrollTop = element.scrollHeight;
@@ -49,7 +49,7 @@ function updateData(number,object){
 
 	//updates it using the object created previously, at the refKey
 	firebase.database().ref(newRefKey).set(object);
-	console.log("added")
+	// console.log("added")
 	document.getElementById("chatInput").value = null;
 	// loadChats();
 
@@ -100,9 +100,9 @@ function loadChats(){
 	  var size = Object.size(snapshot.val());
 	  for (var i=0; i<size; i++){
 	  	var author = snapshot.val()[i].chatAuthor;
-		console.log("author: " +author);
+		// console.log("author: " +author);
 		var text = snapshot.val()[i].chatText
-		console.log("chat text: " + text) 	
+		// console.log("chat text: " + text) 	
 		var newLine = document.createElement("p")
 		newLine.innerHTML="<span style='font-weight: bold'>"+author+": </span>"+text
 		document.getElementById("chatBox").appendChild(newLine)
