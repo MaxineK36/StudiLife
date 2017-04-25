@@ -90,7 +90,7 @@
 	/*background-color: white;
 	border: solid 1px #adadad;*/
 	border-bottom: none;
-	
+
 }
 
 /*sets the margins for the chat window*/
@@ -111,6 +111,7 @@
 	text-align: left;
 	background-color: #D1FEF2;
 	font-size: 12px;
+	overflow: scroll;
 
 }
 
