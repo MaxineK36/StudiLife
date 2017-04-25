@@ -3,7 +3,7 @@ var classID = getQueryVariable("classID")
 
 var chatRefKey = "chats/" +"classes/" + classID;
 
-console.log("chat 9:51")
+console.log("chat 9:53")
 
 // var element = document.getElementById("chatBox");
 // element.scrollTop = element.scrollHeight;
@@ -42,7 +42,7 @@ function chatMoment(chatText,chatAuthor){
 }
 
 
-function updateData(number,object){
+function updateChatData(number,object){
 
 	//creates a refkey based on the numerical id recieved
 	var newRefKey = chatRefKey+"/"+number
@@ -73,7 +73,7 @@ function addChatMoment(){
 		var tempChat = new chatMoment(thisChatText,thisChatAuthor) 
 		// alert("hey")
 		// console.log(tempChat)
-		updateData(arraySize,tempChat)
+		updateChatData(arraySize,tempChat)
 		var newLine = document.createElement("p")
 		newLine.innerHTML="<span style='font-weight: bold'>"+thisChatAuthor+": </span>"+thisChatText
 		document.getElementById("chatBox").appendChild(newLine)
