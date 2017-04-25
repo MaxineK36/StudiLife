@@ -3,7 +3,7 @@ var classID = getQueryVariable("classID")
 
 var chatRefKey = "chats/" +"classes/" + classID;
 
-console.log("chat 9:53")
+console.log("chat 9:00")
 
 // var element = document.getElementById("chatBox");
 // element.scrollTop = element.scrollHeight;
