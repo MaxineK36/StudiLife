@@ -1,4 +1,4 @@
-console.log("classpage 9:13")
+console.log("classpage 9:59")
 
 var database = firebase.database();
 var successCounter = 0;
@@ -25,7 +25,7 @@ function setupPage(){
 	  document.getElementById("classYear").innerHTML = snapshot.val()[classID].year;
 	});
 
-	resetHomeworks();
+	// resetHomeworks();
 	loadChats();
 }
 
@@ -43,9 +43,9 @@ function resetHomeworks(){
 
 	  	if (snapshot.val()[i]!=null){
 		 	var dueDate = snapshot.val()[i].dueDate;
-			console.log("due Date: " +dueDate);
+			// console.log("due Date: " +dueDate);
 			var assignmentTitle = snapshot.val()[i].assignmentTitle
-			console.log("assignment title: " + assignmentTitle) 	
+			// console.log("assignment title: " + assignmentTitle) 	
 					var hwID = snapshot.val()[i].ID
 
 			var newRow = document.createElement("tr");
@@ -59,7 +59,7 @@ function resetHomeworks(){
 			  	var newX = document.createElement("button")
 			  	$(newX).addClass("glyphicon glyphicon-remove btn btn-default xButton "+hwID);
 			  	$(newX).id="hw"+hwID;
-			  	console.log(hwID)			  	
+			  	// console.log(hwID)			  	
 			  	$(newX).val(hwID);
 			  	$(newX).on("click",	function(){ deleteHW(classID,$(this).val())})
 
@@ -82,7 +82,7 @@ function deleteHW(classID,hwID){
 	var tempRefKey = HWrefKey+"/"+hwID;
 	if (doIt == true) {
 		firebase.database().ref(tempRefKey).remove();
-		resetHomeworks();
+		// resetHomeworks();
 	}
 	else if (doIt == false) {
 	}
@@ -122,20 +122,6 @@ Object.size = function(obj){
 		return size;
 	}
 
-//to add data to firebase
-// function updateData(number,object){
-// 	console.log("one")
-// 	//creates a refkey based on the numerical id recieved
-// 	var newRefKey = HWrefKey+"/"+number
-
-// 	//updates it using the object created previously, at the refKey
-// 	firebase.database().ref(newRefKey).set(object);
-// 	console.log(newRefKey);
-// 	console.log("added")
-// 	resetHomeworks();
-// 	alert('real test worked')
-
-// }
 
 function updateHWData(number,object){
 	console.log("one")
@@ -147,12 +133,10 @@ function updateHWData(number,object){
 	// resetHomeworks();
 }
 
-// updateData(0,0)
-
 function createHomeworkAssignment(){
 	var arraySize
 	firebase.database().ref(HWrefKey).once('value').then(function(snapshot) {
-		console.log("reading")
+		// console.log("reading")
 	  // console.log(snapshot.val());
 		arraySize = Object.size(snapshot.val());
 
@@ -168,7 +152,7 @@ function createHomeworkAssignment(){
 		var chosenDueDate = document.getElementById("dueDate").value;
 		var chosenAssignmentTitle = document.getElementById("assignmentTitle").value;
 		var tempAssignment = new homeworkAssignment(chosenDueDate,chosenAssignmentTitle,1,newNumber);
-		console.log(tempAssignment);
+		// console.log(tempAssignment);
 		updateHWData(newNumber,tempAssignment);
 		});
 
